@@ -32,10 +32,18 @@ class LinkedList(object):
     def insert(self, data):
         # TODO: insert a new node
         new_node = Node(data)
+        new_node.set_next(self.head)
+        self.head=new_node
+        self.count +=1
 
     def find(self, val):
         # TODO: find the first item with a given value
         item = self.head
+        while(item != None):
+            if item.get_data() == val:
+                return item
+            else:
+                item = item.get_next()
 
         return None
 
