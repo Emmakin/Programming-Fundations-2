@@ -69,8 +69,8 @@ class LinkedList(object):
             tempnode = tempnode.get_next()
 
 
-# create a linked list and insert some items
-itemlist = LinkedList()
+# create a linked list, insert some items and print out the items
+itemlist = LinkedList() 
 itemlist.insert(38)
 itemlist.insert(49)
 itemlist.insert(13)
