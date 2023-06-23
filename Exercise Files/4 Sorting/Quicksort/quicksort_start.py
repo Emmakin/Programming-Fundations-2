@@ -25,11 +25,21 @@ def partition(datavalues, first, last):
     done = False
     while not done:
         # TODO: advance the lower index
+        while lower <= upper and datavalues[lower] <= pivotvalue:
+            lower += 1
 
         # TODO: advance the upper index
-
+        while datavalues[upper] >= pivotvalue and upper >= lower:
+            upper -= 1
         # TODO: if the two indexes cross, we have found the split point
-        pass
+        if upper < lower:
+            done = True
+
+        #To swap the values 
+        else:
+            temp = datavalues[lower]
+            datavalues[lower] = datavalues[upper]
+            datavalues[upper] = temp
 
     # when the split point is found, exchange the pivot value
     temp = datavalues[first]
