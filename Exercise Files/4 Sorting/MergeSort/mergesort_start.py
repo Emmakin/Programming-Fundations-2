@@ -10,6 +10,8 @@ def mergesort(dataset):
         rightarr = dataset[mid:]
 
         # TODO: recursively break down the arrays
+        mergesort(leftarr)
+        mergesort(rightarr)
 
 
         # TODO: now perform the merging
@@ -18,9 +20,18 @@ def mergesort(dataset):
         k=0 # index into merged array
 
         # TODO: while both arrays have content
+        while i < len(leftarr) and j < len(rightarr):
+            if leftarr[i] < rightarr[j]:
+                dataset[k] = leftarr[i]
+                i += 1
+            else:
+                dataset[k] = rightarr[j]
+                j += 1
+                k += 1
 
 
         # TODO: if the left array still has values, add them
+        
 
 
         # TODO: if the right array still has values, add them
