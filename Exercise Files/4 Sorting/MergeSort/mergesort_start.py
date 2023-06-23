@@ -31,10 +31,17 @@ def mergesort(dataset):
 
 
         # TODO: if the left array still has values, add them
-        
+        while i < len(leftarr):
+            dataset[k] = leftarr[i]
+            i += 1
+            k += 1
 
 
         # TODO: if the right array still has values, add them
+        while j < len(rightarr):
+            dataset[k] = rightarr[j]
+            j += 1
+            k += 1        
 
 
 
